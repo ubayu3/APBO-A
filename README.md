@@ -3,10 +3,10 @@
 # LAPORAN-TUGAS-APBO-OPTIMALISASI ALUR PEMESANAN PADA DYDY COFFE
 
 Anggota Kelompok :
-4524210020	Bryan Ananda Saputra Hulu	
-4524210056	Muhammad Agis Irawan
-4524210052	M.AL GHIFARI
-4524210019	Bayu Sardo Situmorang
-4524210029	Dzikrullah Surachman
+- 4524210020-Bryan Ananda Saputra Hulu	
+- 4524210056-Muhammad Agis Irawan
+- 4524210052-M.AL GHIFARI
+-4524210019-Bayu Sardo Situmorang
+-4524210029-Dzikrullah Surachman
 
 
