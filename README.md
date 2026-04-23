@@ -1,7 +1,7 @@
 # APBO-A KEL-5 
 
 # LAPORAN-TUGAS-APBO-OPTIMALISASI ALUR PEMESANAN PADA DYDY COFFE
-Dosen: Adi Wahyu Pribadi, S.T M.T
+Dosen: Adi Wahyu Pribadi, S.Si., M.Kom
 
 ---
 
