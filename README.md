@@ -151,7 +151,7 @@ Hasil wawancara dengan Dani (Owner DYDY):
 * Owner setuju bahwa sistem ini memberikan kenyamanan bagi pelanggan agar tidak terburu-buru memesan.
 * Tantangan utama adalah pengelolaan update stok secara berkala serta stabilitas jaringan/hosting web.
 
-## 💡 Rangkuman & Usulan yang Diberikan
-Setelah menilai, masalah utama yang dihadapi DYDY Coffee adalah antrian yang lama di kasir, tekanan dari pelanggan saat memilih menu, dan kemungkinan kesalahan komunikasi dalam pesanan. Situasi ini terjadi karena sistem pemesanan masih terpusat dan dilakukan secara manual, sehingga proses operasional menjadi tidak efisien.
+## 💡 Kesimpulan & Solusi yang Diberikan
+Berdasarkan analisis, permasalahan utama pada DYDY Coffee adalah antrean panjang di kasir, tekanan pelanggan saat memilih menu, serta risiko kesalahan komunikasi dalam pesanan. Hal ini disebabkan oleh sistem pemesanan yang masih terpusat dan dilakukan secara manual, sehingga alur operasional menjadi kurang efisien.
 
-Usulan yang diberikan adalah penerapan sistem Scan-to-Order berbasis web dengan kontrol Hybrid, di mana pelanggan bisa memesan langsung dari meja melalui QR Code, sementara kasir berfungsi sebagai pengendali untuk memverifikasi pesanan, persediaan, dan pembayaran. Sistem ini mempercepat, mempermudah, dan menstrukturkan proses, namun tetap mempertahankan interaksi yang ramah antara staf dan pelanggan.
+Solusi yang diberikan adalah penerapan sistem Scan-to-Order berbasis web dengan konsep Hybrid Control, di mana pelanggan dapat memesan langsung dari meja melalui QR Code, sementara kasir tetap berperan sebagai pengendali untuk memverifikasi pesanan, ketersediaan stok, dan pembayaran. Sistem ini mampu meningkatkan kecepatan, ketepatan, dan keteraturan proses, sekaligus tetap mempertahankan interaksi pelayanan (hospitality) antara staf dan pelanggan.
