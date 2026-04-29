@@ -150,3 +150,7 @@ Hasil wawancara dengan Dani (Owner DYDY):
 * Sistem keluar struk otomatis dinilai jauh lebih efisien dan membantu dibandingkan input manual.
 * Owner setuju bahwa sistem ini memberikan kenyamanan bagi pelanggan agar tidak terburu-buru memesan.
 * Tantangan utama adalah pengelolaan update stok secara berkala serta stabilitas jaringan/hosting web.
+
+## 💡 Rangkuman & Usulan yang Diberikan
+Setelah menilai, masalah utama yang dihadapi DYDY Coffee adalah antrian yang lama di kasir, tekanan dari pelanggan saat memilih menu, dan kemungkinan kesalahan komunikasi dalam pesanan. Situasi ini terjadi karena sistem pemesanan masih terpusat dan dilakukan secara manual, sehingga proses operasional menjadi tidak efisien.
+Usulan yang diberikan adalah penerapan sistem Scan-to-Order berbasis web dengan kontrol Hybrid, di mana pelanggan bisa memesan langsung dari meja melalui QR Code, sementara kasir berfungsi sebagai pengendali untuk memverifikasi pesanan, persediaan, dan pembayaran. Sistem ini mempercepat, mempermudah, dan menstrukturkan proses, namun tetap mempertahankan interaksi yang ramah antara staf dan pelanggan.
