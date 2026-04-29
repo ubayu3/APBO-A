@@ -57,6 +57,32 @@ Rincian Alur Sistem (Proses Inti):
 4. Kontrol Layanan: Staf tetap bisa melakukan interaksi personal saat mengantar pesanan ke meja.
 
 ---
+## 🛡️ Bagian 3: Langkah Antisipasi Kendala
+Bagian 3: Langkah Antisipasi Kendala & Resiliensi Sistem
+Untuk menjamin keberlangsungan operasional dan kenyamanan pelanggan di DYDY Coffee, kami telah menyusun strategi mitigasi terhadap potensi hambatan teknis maupun non-teknis:
+
+1. Stabilitas Konektivitas & Infrastruktur Jaringan
+Ketergantungan pada sistem berbasis web menuntut infrastruktur jaringan yang kokoh. Langkah yang diambil meliputi:
+
+Implementasi High-Performance Hosting: Menggunakan layanan hosting dengan uptime tinggi dan latency rendah untuk memastikan akses menu digital tetap cepat meskipun diakses banyak pengguna secara bersamaan.
+
+Dedicated Customer WiFi: Menyediakan jaringan WiFi khusus pelanggan yang terpisah dari jaringan operasional kasir. Hal ini dilakukan untuk menghindari interferensi sinyal dan menjaga keamanan data internal cafe.
+
+Offline Mode Standby: Menyiapkan katalog fisik (hardcopy) sebagai cadangan (backup) darurat apabila terjadi gangguan total pada penyedia layanan internet (ISP).
+
+2. Edukasi Pelanggan & Inklusivitas Layanan
+Kami menyadari adanya variasi tingkat literasi digital di kalangan pelanggan. Strategi antisipasinya adalah:
+
+Hybrid Service Support: Staf tetap bersiaga (standby) di area meja untuk memberikan panduan langsung bagi pelanggan yang kesulitan melakukan pemindaian QR Code atau navigasi menu.
+
+Visual Guide Stand: Menempatkan instruksi visual yang ringkas dan menarik di setiap meja tentang cara memesan melalui sistem Scan-to-Order.
+
+Human-Centered Technology: Sistem dirancang hanya sebagai alat bantu efisiensi, sementara aspek keramahan (hospitality) tetap diutamakan melalui interaksi manual saat penyajian menu dan proses verifikasi akhir di kasir.
+
+3. Sinkronisasi Data & Stok Real-Time
+Untuk menghindari pelanggan memesan menu yang ternyata sudah habis:
+
+Admin Control Panel: Menyediakan fitur bagi kasir untuk memperbarui status ketersediaan stok secara instan, sehingga menu yang habis akan langsung tertandai secara otomatis di sisi pelanggan.
 
 
 ## 📌 GIT WORKFLOW (Panduan Kontribusi)
