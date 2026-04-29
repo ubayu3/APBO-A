@@ -11,10 +11,53 @@
 * **4524210019** - Bayu Sardo Situmorang
 * **4524210029** - Dzikrullah Surachman
 
+
+<br><br>
+
+![alt text](image.png)
+
+<br><br>
+
 **Tema Tugas:**
 OPTIMALISASI ALUR PEMESANAN PADA DYDY COFFEE
 
+
 ---
+## 📖 Latar Belakang
+DYDY Coffee saat ini menghadapi tantangan operasional dalam menangani lonjakan pelanggan di jam sibuk. Berdasarkan wawancara dengan Bapak Dani, sistem pemesanan konvensional di kasir menyebabkan penumpukan antrean (queue bottleneck). Hal ini memberikan tekanan psikologis bagi pelanggan saat memilih menu dan membuat staf kasir tidak fleksibel untuk membantu pelayanan di area meja.
+
+Ketiadaan sistem pemesanan mandiri membuat alur kerja menjadi kurang efektif. Oleh karena itu, diperlukan sistem informasi Scan-to-Order berbasis web untuk mempercepat proses transaksi, meminimalisir kesalahan pesanan, namun tetap menjaga interaksi hangat (hospitality) yang menjadi ciri khas DYDY Coffee.
+
+---
+## 🎯 Sasaran Pengguna
+
+👨‍💼 Kasir & Barista: Pengelola yang memvalidasi pesanan, memantau ketersediaan stok, dan menerima instruksi kerja otomatis di area produksi.
+
+🧑‍💻 Customer (Pelanggan): Pengunjung yang menginginkan kemudahan memesan menu langsung dari meja tanpa harus mengantre lama di kasir.
+
+---
+
+## ⚖️ Bagian 1: Analisis Perbandingan Sistem
+
+| Kategori | Sistem Lama (Konvensional) | Sistem Baru (Digital Scan-to-Order) |
+| :--- | :--- | :--- |
+| **Alur Antrean** | Menumpuk di depan kasir, mengganggu arus masuk. | Terurai karena pelanggan memesan langsung dari meja. |
+| **Proses Memilih** | Terburu-buru karena merasa ditunggu antrean belakang. | Lebih santai, pelanggan bebas melihat detail menu di HP. |
+| **Input Pesanan** | Kasir mengetik manual satu per satu di tablet. | Pelanggan input mandiri; Kasir tinggal verifikasi & bayar. |
+| **Komunikasi Barista** | Bergantung pada penyampaian verbal atau input manual. | Struk otomatis tercetak di Bar sebagai instruksi kerja sah. |
+
+---
+
+## 📌 Bagian 2: Skenario Sistem (Use Case)
+Diagram Use Case:
+Rincian Alur Sistem (Proses Inti):
+1. Pemesanan Mandiri: Pelanggan scan QR Code di meja, memilih menu, dan mengirim pesanan ke sistem.
+2. Verifikasi Kasir: Kasir menerima notifikasi, mengecek stok, dan memvalidasi pembayaran pelanggan.
+3. Integrasi Produksi: Setelah divalidasi, sistem mengirim perintah cetak struk ke area Barista untuk diproses.
+4. Kontrol Layanan: Staf tetap bisa melakukan interaksi personal saat mengantar pesanan ke meja.
+
+---
+
 
 ## 📌 GIT WORKFLOW (Panduan Kontribusi)
 1.  `git clone` (Clone repo ke local)
