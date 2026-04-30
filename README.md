@@ -37,27 +37,17 @@ Ketiadaan sistem pemesanan mandiri membuat alur kerja menjadi kurang efektif. Ol
 
 ---
 
-## ⚖️ Bagian 1: Analisis Perbandingan Sistem
+## ⚖️ Analisis Perbandingan Sistem
 
 | Kategori | Sistem Lama (Konvensional) | Sistem Baru (Digital Scan-to-Order) |
 | :--- | :--- | :--- |
 | **Alur Antrean** | Menumpuk di depan kasir, mengganggu arus masuk. | Terurai karena pelanggan memesan langsung dari meja. |
 | **Proses Memilih** | Terburu-buru karena merasa ditunggu antrean belakang. | Lebih santai, pelanggan bebas melihat detail menu di HP. |
 | **Input Pesanan** | Kasir mengetik manual satu per satu di tablet. | Pelanggan input mandiri; Kasir tinggal verifikasi & bayar. |
-| **Komunikasi Barista** | Bergantung pada penyampaian verbal atau input manual. | Struk otomatis tercetak di Bar sebagai instruksi kerja sah. |
+| **Komunikasi Barista** | Bergantung pada penyampaian verbal atau input manual. | Struk otomatis tercetak di Bar sebagai instruksi kerja
 
 ---
-
-## 📌 Bagian 2: Skenario Sistem (Use Case)
-Diagram Use Case:
-Rincian Alur Sistem (Proses Inti):
-1. Pemesanan Mandiri: Pelanggan scan QR Code di meja, memilih menu, dan mengirim pesanan ke sistem.
-2. Verifikasi Kasir: Kasir menerima notifikasi, mengecek stok, dan memvalidasi pembayaran pelanggan.
-3. Integrasi Produksi: Setelah divalidasi, sistem mengirim perintah cetak struk ke area Barista untuk diproses.
-4. Kontrol Layanan: Staf tetap bisa melakukan interaksi personal saat mengantar pesanan ke meja.
-
----
-## 🛡️ Bagian 3: Langkah Antisipasi Kendala
+## 🛡️ Langkah Antisipasi Kendala
 Bagian 3: Langkah Antisipasi Kendala & Resiliensi Sistem
 Untuk menjamin keberlangsungan operasional dan kenyamanan pelanggan di DYDY Coffee, kami telah menyusun strategi mitigasi terhadap potensi hambatan teknis maupun non-teknis:
 
@@ -129,9 +119,12 @@ Sistem dirancang agar kasir berfungsi sebagai penyaring (filter) utama dengan ke
 4.  **Pelayan:** Mengantarkan pesanan ke meja sesuai nomor yang tertera di struk.
 
 ### Use Case Utama
-* **Scan-to-Order:** Pelanggan memindai QR Code unik di setiap meja.
-* **Pemesanan Mandiri:** Pelanggan memilih menu dan membayar via e-wallet di halaman web.
-* **Verifikasi Pusat:** Kasir menerima notifikasi pesanan dan mencetak struk otomatis untuk divalidasi.
+Diagram Use Case:
+Rincian Alur Sistem (Proses Inti):
+1. Pemesanan Mandiri: Pelanggan scan QR Code di meja, memilih menu, dan mengirim pesanan ke sistem.
+2. Verifikasi Kasir: Kasir menerima notifikasi, mengecek stok, dan memvalidasi pembayaran pelanggan.
+3. Integrasi Produksi: Setelah divalidasi, sistem mengirim perintah cetak struk ke area Barista untuk diproses.
+4. Kontrol Layanan: Staf tetap bisa melakukan interaksi personal saat mengantar pesanan ke meja.
 
 ## 5. Diagram Workflow (Alur Kerja/SOP)
 1.  **Pemisahan Meja:** Setiap meja diberikan QR Code unik yang tertanam nomor mejanya.
