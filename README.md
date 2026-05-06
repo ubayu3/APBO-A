@@ -22,68 +22,60 @@
 OPTIMALISASI ALUR PEMESANAN PADA DYDY COFFEE
 
 
----
-## 📖 Latar Belakang
-DYDY Coffee saat ini menghadapi tantangan operasional dalam menangani lonjakan pelanggan di jam sibuk. Berdasarkan wawancara dengan Bapak Dani, sistem pemesanan konvensional di kasir menyebabkan penumpukan antrean (queue bottleneck). Hal ini memberikan tekanan psikologis bagi pelanggan saat memilih menu dan membuat staf kasir tidak fleksibel untuk membantu pelayanan di area meja.
+# Laporan Pengembangan Sistem: Scan-to-Order DYDY Coffee
 
-Ketiadaan sistem pemesanan mandiri membuat alur kerja menjadi kurang efektif. Oleh karena itu, diperlukan sistem informasi Scan-to-Order berbasis web untuk mempercepat proses transaksi, meminimalisir kesalahan pesanan, namun tetap menjaga interaksi hangat (hospitality) yang menjadi ciri khas DYDY Coffee.
+## Latar Belakang
+Berdasarkan hasil observasi dan wawancara yang dilakukan dengan **Bapak Dani** selaku pemilik **DYDY Coffee**, ditemukan bahwa sistem operasional pemesanan saat ini masih menghadapi kendala, terutama pada saat jam sibuk (*rush hour*). Saat ini, proses pemesanan masih terpusat di satu meja kasir menggunakan satu perangkat tablet, sehingga menyebabkan penumpukan antrean (*queue bottleneck*) di area pintu masuk.
 
----
-## 🎯 Sasaran Pengguna
+Selain masalah antrean, pelanggan sering kali merasa tertekan secara psikologis ketika harus memilih menu di depan kasir sementara antrean di belakangnya sudah memanjang, yang mengakibatkan pelanggan memilih menu secara terburu-buru. Di sisi lain, staf kasir menjadi kurang fleksibel karena harus terus berjaga di meja kasir untuk menginput pesanan secara manual.
 
-👨‍💼 Kasir & Barista: Pengelola yang memvalidasi pesanan, memantau ketersediaan stok, dan menerima instruksi kerja otomatis di area produksi.
-
-🧑‍💻 Customer (Pelanggan): Pengunjung yang menginginkan kemudahan memesan menu langsung dari meja tanpa harus mengantre lama di kasir.
+Oleh karena itu, proyek ini bertujuan untuk mengembangkan **Sistem Informasi Scan-to-Order berbasis web**. Dengan sistem ini, pelanggan dapat memesan langsung dari meja masing-masing melalui QR Code. Implementasi ini diharapkan dapat mempercepat alur transaksi dan meminimalisir kesalahan komunikasi, namun tetap menjaga aspek pelayanan (*hospitality*) melalui interaksi saat verifikasi pesanan dan penyajian menu.
 
 ---
 
-## ⚖️ Analisis Perbandingan Sistem
+## Sasaran Pengguna
+*   **Kasir & Barista**: Bertugas memvalidasi pesanan yang masuk, memantau ketersediaan stok secara *real-time*, dan menjalankan instruksi kerja berdasarkan struk pesanan otomatis.
+*   **Pelanggan (Customer)**: Pengunjung cafe yang menginginkan kemudahan memesan menu secara mandiri dan santai langsung dari meja tanpa harus mengantre lama di kasir.
 
-| Kategori | Sistem Lama (Konvensional) | Sistem Baru (Digital Scan-to-Order) |
+---
+
+## Analisis Perbandingan Sistem
+
+| Kategori | Sistem Lama (Konvensional) | Sistem Baru (Scan-to-Order) |
 | :--- | :--- | :--- |
 | **Alur Antrean** | Menumpuk di depan kasir, mengganggu arus masuk. | Terurai karena pelanggan memesan langsung dari meja. |
-| **Proses Memilih** | Terburu-buru karena merasa ditunggu antrean belakang. | Lebih santai, pelanggan bebas melihat detail menu di HP. |
+| **Proses Memilih** | Terburu-buru karena merasa ditunggui antrean belakang. | Lebih santai, pelanggan bebas melihat detail menu di HP. |
 | **Input Pesanan** | Kasir mengetik manual satu per satu di tablet. | Pelanggan input mandiri; Kasir tinggal verifikasi & bayar. |
-| **Komunikasi Barista** | Bergantung pada penyampaian verbal atau input manual. | Struk otomatis tercetak di Bar sebagai instruksi kerja
+| **Komunikasi** | Bergantung pada penyampaian verbal atau input manual. | Struk otomatis tercetak di Bar sebagai instruksi kerja. |
 
 ---
-## 🛡️ Langkah Antisipasi Kendala
-Bagian 3: Langkah Antisipasi Kendala & Resiliensi Sistem
-Untuk menjamin keberlangsungan operasional dan kenyamanan pelanggan di DYDY Coffee, kami telah menyusun strategi mitigasi terhadap potensi hambatan teknis maupun non-teknis:
 
-1. Stabilitas Konektivitas & Infrastruktur Jaringan
-Ketergantungan pada sistem berbasis web menuntut infrastruktur jaringan yang kokoh. Langkah yang diambil meliputi:
+## Struktur Use Case Diagram
+Sistem ini membagi fungsionalitas berdasarkan peran aktor utama untuk menjamin alur kerja yang terstruktur:
 
-Implementasi High-Performance Hosting: Menggunakan layanan hosting dengan uptime tinggi dan latency rendah untuk memastikan akses menu digital tetap cepat meskipun diakses banyak pengguna secara bersamaan.
+### **Aktor & Peran Sistem**
+*   **Pelanggan**: Melakukan pemindaian QR Code meja, memilih menu melalui katalog digital, melakukan pemesanan, dan melakukan pembayaran mandiri.
+*   **Kasir**: Menerima notifikasi pesanan, melakukan verifikasi pembayaran, mengecek ketersediaan bahan, dan memberikan instruksi produksi melalui cetak struk.
+*   **Barista/Dapur**: Menerima instruksi kerja berupa struk fisik dan memproses pesanan sesuai urutan.
+*   **Pelayan**: Mengantarkan pesanan ke meja pelanggan sesuai dengan nomor meja yang tertera pada struk.
 
-Dedicated Customer WiFi: Menyediakan jaringan WiFi khusus pelanggan yang terpisah dari jaringan operasional kasir. Hal ini dilakukan untuk menghindari interferensi sinyal dan menjaga keamanan data internal cafe.
+### **Fungsionalitas Utama (Use Case)**
+1.  **Pemesanan Mandiri**: Pelanggan melakukan input pesanan langsung ke sistem tanpa melalui perantara kasir.
+2.  **Verifikasi & Kontrol Stok**: Kasir memiliki kendali penuh untuk memperbarui status stok secara instan agar tidak terjadi salah pesan pada menu yang habis.
+3.  **Integrasi Produksi**: Sistem secara otomatis mengirimkan perintah cetak struk ke bagian produksi setelah pesanan divalidasi oleh kasir.
 
-Offline Mode Standby: Menyiapkan katalog fisik (hardcopy) sebagai cadangan (backup) darurat apabila terjadi gangguan total pada penyedia layanan internet (ISP).
+---
 
-2. Edukasi Pelanggan & Inklusivitas Layanan
-Kami menyadari adanya variasi tingkat literasi digital di kalangan pelanggan. Strategi antisipasinya adalah:
+## Langkah Antisipasi & Resiliensi Sistem
+Untuk menjamin keberlangsungan operasional, telah disusun strategi mitigasi sebagai berikut:
+*   **Infrastruktur Jaringan**: Menggunakan hosting dengan performa tinggi dan menyediakan WiFi khusus pelanggan yang terpisah dari jaringan operasional kasir untuk menjaga keamanan data.
+*   **Offline Mode Standby**: Tetap menyediakan katalog fisik (*hardcopy*) sebagai cadangan darurat apabila terjadi gangguan pada penyedia layanan internet (ISP).
+*   **Hybrid Service Support**: Staf tetap bersiaga di area meja untuk membantu pelanggan yang kesulitan dalam melakukan navigasi menu digital atau pemindaian QR Code.
 
-Hybrid Service Support: Staf tetap bersiaga (standby) di area meja untuk memberikan panduan langsung bagi pelanggan yang kesulitan melakukan pemindaian QR Code atau navigasi menu.
+---
 
-Visual Guide Stand: Menempatkan instruksi visual yang ringkas dan menarik di setiap meja tentang cara memesan melalui sistem Scan-to-Order.
-
-Human-Centered Technology: Sistem dirancang hanya sebagai alat bantu efisiensi, sementara aspek keramahan (hospitality) tetap diutamakan melalui interaksi manual saat penyajian menu dan proses verifikasi akhir di kasir.
-
-3. Sinkronisasi Data & Stok Real-Time
-Untuk menghindari pelanggan memesan menu yang ternyata sudah habis:
-
-Admin Control Panel: Menyediakan fitur bagi kasir untuk memperbarui status ketersediaan stok secara instan, sehingga menu yang habis akan langsung tertandai secara otomatis di sisi pelanggan.
-
-
-## 📌 GIT WORKFLOW (Panduan Kontribusi)
-1.  `git clone` (Clone repo ke local)
-2.  `git checkout -b NAMAKALIAN` (Membuat branch dengan nama sendiri)
-3.  `git checkout branch_tujuan` (Pindah branch kalian atau ke main)
-4.  `git add .` (Menambah perubahan yang ingin dicommit)
-5.  `git commit -m "pesan commit"` (Commit perubahan)
-6.  `git push -u origin BRANCHKALIAN` (Push ke branch sendiri, **JANGAN KE MAIN!!**)
-7.  `git pull origin main` (Pull dari main ketika sudah merge final)
-8.  `git merge main` (Merge perubahan main yang terupdate ke branch sendiri)
+## Kesimpulan
+Permasalahan utama pada **DYDY Coffee** adalah efisiensi alur pemesanan yang menyebabkan penumpukan antrean dan tekanan pada pelanggan. Solusi **Scan-to-Order** berbasis web dengan konsep **Hybrid Control** memungkinkan proses transaksi menjadi lebih cepat dan terdata dengan baik, namun tetap mengedepankan aspek keramahan yang menjadi ciri khas layanan DYDY Coffee.
 
 ---
 
@@ -144,7 +136,19 @@ Hasil wawancara dengan Dani (Owner DYDY):
 * Owner setuju bahwa sistem ini memberikan kenyamanan bagi pelanggan agar tidak terburu-buru memesan.
 * Tantangan utama adalah pengelolaan update stok secara berkala serta stabilitas jaringan/hosting web.
 
-## 💡 Kesimpulan & Solusi yang Diberikan
+## Kesimpulan & Solusi yang Diberikan
 Berdasarkan analisis, permasalahan utama pada DYDY Coffee adalah antrean panjang di kasir, tekanan pelanggan saat memilih menu, serta risiko kesalahan komunikasi dalam pesanan. Hal ini disebabkan oleh sistem pemesanan yang masih terpusat dan dilakukan secara manual, sehingga alur operasional menjadi kurang efisien.
 
 Solusi yang diberikan adalah penerapan sistem Scan-to-Order berbasis web dengan konsep Hybrid Control, di mana pelanggan dapat memesan langsung dari meja melalui QR Code, sementara kasir tetap berperan sebagai pengendali untuk memverifikasi pesanan, ketersediaan stok, dan pembayaran. Sistem ini mampu meningkatkan kecepatan, ketepatan, dan keteraturan proses, sekaligus tetap mempertahankan interaksi pelayanan (hospitality) antara staf dan pelanggan.
+
+--- 
+
+## 📌 GIT WORKFLOW (Panduan Kontribusi)
+1.  `git clone` (Clone repo ke local)
+2.  `git checkout -b NAMAKALIAN` (Membuat branch dengan nama sendiri)
+3.  `git checkout branch_tujuan` (Pindah branch kalian atau ke main)
+4.  `git add .` (Menambah perubahan yang ingin dicommit)
+5.  `git commit -m "pesan commit"` (Commit perubahan)
+6.  `git push -u origin BRANCHKALIAN` (Push ke branch sendiri, **JANGAN KE MAIN!!**)
+7.  `git pull origin main` (Pull dari main ketika sudah merge final)
+8.  `git merge main` (Merge perubahan main yang terupdate ke branch sendiri)
