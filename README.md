@@ -143,7 +143,7 @@ Solusi yang diberikan adalah penerapan sistem Scan-to-Order berbasis web dengan 
 
 --- 
 
-## 📌 GIT WORKFLOW (Panduan Kontribusi)
+## GIT WORKFLOW (Panduan Kontribusi)
 1.  `git clone` (Clone repo ke local)
 2.  `git checkout -b NAMAKALIAN` (Membuat branch dengan nama sendiri)
 3.  `git checkout branch_tujuan` (Pindah branch kalian atau ke main)
