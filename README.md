@@ -64,7 +64,11 @@ Klik pada masing-masing bagian di bawah ini untuk melihat detail transkrip wawan
 
 <br>
 
-![Dokumentasi Wawancara](image.png)
+<p align="center">
+  <img src="image.png" alt="Dokumentasi wawancara" width="1000">
+  <br>
+  <i>Gambar 1: Dokumentasi wawancara DYDY Coffee</i>
+</p>
 
 ---
 
@@ -96,9 +100,9 @@ Klik pada masing-masing bagian di bawah ini untuk melihat detail transkrip wawan
 <br>
 
 <p align="center">
-  <img src="diagram_usecase.png" alt="Diagram Use Case Kelompok 5" width="600">
+  <img src="diagram_usecase.png" alt="Diagram Use Case Kelompok 5" width="1000">
   <br>
-  <i>Gambar 1: Diagram Use Case Sistem Scan-to-Order DYDY Coffee</i>
+  <i>Gambar 2: Diagram Use Case Sistem Scan-to-Order DYDY Coffee</i>
 </p>
 
 ---
