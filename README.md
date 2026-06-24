@@ -6,7 +6,7 @@ Sistem pemesanan berbasis QR Code untuk membantu proses pemesanan pelanggan di D
 
 ## Tentang Proyek
 
-DYDY Coffee saat ini masih menggunakan proses pemesanan yang berpusat pada area kasir. Saat kondisi ramai, pelanggan harus mengantre untuk melakukan pemesanan sehingga proses pelayanan menjadi lebih lambat.
+DYDY Coffee saat ini masih menggunakan proses pemesanan yang berpusat pada area kasir. Saat kondisi ramai, pelanggan harus mengantri untuk melakukan pemesanan sehingga proses pelayanan menjadi lebih lambat.
 
 Berdasarkan hasil wawancara dengan owner DYDY Coffee, salah satu kendala yang sering terjadi adalah antrean pada akhir pekan atau jam sibuk. Oleh karena itu, dikembangkan sistem **Scan-to-Order berbasis web** yang memungkinkan pelanggan melakukan pemesanan langsung dari meja menggunakan QR Code.
 
