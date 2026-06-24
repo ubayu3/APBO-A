@@ -84,9 +84,7 @@ Pelayan bertugas mengantarkan pesanan yang sudah selesai dibuat ke meja pelangga
 
 ## Use Case Diagram
 
-<p align="center">
-    <img src="diagram_usecase.png" width="900">
-</p>
+<img src="diagram_usecase.png" width="900">
 
 <p align="center">
     <i>Gambar 2. Use Case Diagram Sistem Scan-to-Order DYDY Coffee</i>
