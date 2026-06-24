@@ -18,16 +18,45 @@
 ## 📌 Informasi & Ruang Lingkup Proyek
 
 ### 🎯 Sasaran Pengguna
-Sistem Scan-to-Order DYDY Coffee dirancang untuk memfasilitasi koordinasi antara staf kafe dan kenyamanan pelanggan:
-* **Kasir & Barista**: Bertugas memvalidasi pesanan masuk, memantau stok real-time, dan menjalankan instruksi kerja melalui struk otomatis.
-* **Pelanggan (Customer)**: Pengunjung yang menginginkan kemudahan memesan menu secara mandiri dari meja tanpa harus mengantre lama.
-* **Pelayan**: Mengantarkan pesanan sesuai nomor meja yang tertera pada sistem.
+Sistem Scan-to-Order DYDY Coffee dirancang untuk memfacilitasi koordinasi antara staf kafe dan kenyamanan pelanggan melalui website pemesanan sederhana:
+* **Pelanggan (Customer)**: Mengakses katalog digital via QR Code langsung dari meja masing-masing untuk memesan menu dan melakukan simulasi/konfirmasi pembayaran secara mandiri.
+* **Kasir & Barista**: Memantau daftar pesanan masuk melalui monitor web, memvalidasi status pembayaran, dan memproses menu sesuai nomor meja.
+* **Pelayan**: Mengantarkan pesanan fisik ke meja yang dituju berdasarkan informasi valid yang tertera di sistem monitor kasir.
 
 ### 📚 Analisis Masalah (Latar Belakang)
-Pengelolaan pemesanan saat ini masih terpusat pada satu perangkat tablet di kasir, yang menyebabkan:
+Pengelolaan pemesanan saat ini masih terpusat pada satu perangkat tablet di kasir, yang menyebabkan beberapa kendala utama:
 1. **Queue Bottleneck**: Penumpukan antrean di pintu masuk saat jam sibuk (*rush hour*).
 2. **Psychological Pressure**: Pelanggan merasa terburu-buru memilih menu karena merasa ditunggui antrean di belakangnya.
-3. **Keterbatasan Fleksibilitas**: Staf kasir terpaku di meja untuk input manual satu per satu.
+3. **Keterbatasan Fleksibilitas**: Staf kasir terpaku di meja untuk input manual pesanan satu per satu ke tablet.
+
+## 📖 Referensi & Studi Literatur
+
+Pengembangan sistem *Scan-to-Order* berbasis web untuk DYDY Coffee ini didasarkan pada landasan literatur ilmiah berikut yang memvalidasi penyelesaian masalah operasional di lapangan:
+
+> 📄 **[Jurnal 1] Efisiensi Waktu Pemesanan dan Transaksi**
+> * **Judul**: Implementasi QR Code untuk Efisiensi Waktu Pemesanan Menu Makanan dan Minuman di Restoran maupun Kafe
+> * **Penulis**: Suharianto, dkk. (2020)
+> * **Jurnal**: *BIOS: Jurnal Teknologi Informasi dan Rekayasa Komputer*
+> * **Relevansi**: Pencatatan manual sering kali menimbulkan kendala antrean panjang. Penerapan teknologi QR Code sebagai media pemesanan menu terbukti dapat memotong durasi proses pemesanan secara signifikan dan meningkatkan akurasi data pesanan yang diterima oleh bagian dapur.
+> * **🔗 Tautan Publikasi**: [Implementasi QR Code untuk Efisiensi Waktu Pemesanan Menu Makanan dan Minuman di Restoran maupun Kafe](https://bios.sinergis.org/bios/article/view/7)
+
+---
+
+> 📄 **[Jurnal 2] Pengurangan Kesalahan Pencatatan Manual & Antrean Kasir**
+> * **Judul**: Perancangan Sistem Pemesanan Makanan Menggunakan QR Code Berbasis Website Mobile Pada RightCoffee
+> * **Penulis**: Ratih Wahyuningrum, Daffa Btara Alif Putra Yuono (2025)
+> * **Jurnal**: *Jurnal Esensi Infokom*
+> * **Relevansi**: Kecenderungan konsumen batal memesan sering dipicu oleh rasa malas mengantre di kasir. Solusi *self-service* berbasis *website mobile* yang diakses via QR Code di meja terbukti mampu mereduksi penumpukan antrean fisik secara drastis serta menghilangkan risiko salah catat pesanan.
+> * **🔗 Tautan Publikasi**: [Perancangan Sistem Pemesanan Makanan Menggunakan QR Code Berbasis Website Mobile Pada RightCoffee](https://esensijournal.com/index.php/infokom/article/view/350)
+
+---
+
+> 📄 **[Jurnal 3] Optimalisasi Kecepatan Pelayanan Kafe**
+> * **Judul**: Pengembangan Aplikasi Pemesanan Makanan Berbasis Web Dengan QR Code Untuk Efisiensi Pelayanan Kafe
+> * **Penulis**: Syahri, A., dkk. (2025)
+> * **Jurnal**: *JATI (Jurnal Mahasiswa Teknik Informatika)*
+> * **Relevansi**: Digitalisasi menu lewat integrasi QR Code terbukti dapat mempersingkat waktu rata-rata pemesanan dari semula 7,42 menit menjadi hanya 4 menit. Sistem berbasis web ini sangat efektif untuk meningkatkan efisiensi operasional kafe tanpa mengharuskan pelanggan mengunduh aplikasi tambahan.
+> * **🔗 Tautan Publikasi**: [Pengembangan Aplikasi Pemesanan Makanan Berbasis Web Dengan QR Code Untuk Efisiensi Pelayanan Kafe](https://ejournal.itn.ac.id/jati/article/view/13955)
 
 ---
 
@@ -41,7 +70,7 @@ Klik pada masing-masing bagian di bawah ini untuk melihat detail transkrip wawan
 **Q: Apakah sering terjadi antrean panjang di depan kasir saat jam sibuk?**
 > "Pada hari hectic (weekend) tentu ada antrean yang panjang karena masih input order secara manual. Pemesanan juga bisa dilakukan lewat buku menu."
 
-**Q: Seberapa sering terjadi miskomunikasi antara kasir dan barista?**
+**Q: Seberapa sering terjadi miskomunikasi antara kasir and barista?**
 > "Untuk misskom dalam pemesanan sejauh ini masih aman dikarenakan staff selalu di-training dengan baik."
 
 **Q: Bagaimana cara mengontrol stok yang habis di tablet kasir?**
@@ -73,46 +102,98 @@ Klik pada masing-masing bagian di bawah ini untuk melihat detail transkrip wawan
 ---
 
 ## ⚖️ Analisis Perbandingan SOP
-| Kategori | Sistem Lama (Konvensional) | Sistem Baru (Scan-to-Order) |
+| Kategori | Sistem Lama (Konvensional) | Sistem Baru (Scan-to-Order Sederhana) |
 | :--- | :--- | :--- |
-| **Alur Antrean** | Menumpuk di depan kasir, mengganggu arus masuk. | Terurai karena pelanggan memesan langsung dari meja. |
-| **Proses Memilih** | Terburu-buru karena merasa ditunggui antrean. | Lebih santai via katalog digital di HP pelanggan. |
-| **Input Pesanan** | Kasir mengetik manual satu per satu di tablet. | Pelanggan input mandiri; Kasir tinggal verifikasi. |
-| **Instruksi Kerja** | Bergantung pada penyampaian verbal/input manual. | Struk otomatis tercetak di Barista sebagai perintah kerja. |
+| **Alur Antrean** | Menumpuk di depan kasir, mengganggu arus masuk. | Terurai karena pelanggan bisa langsung duduk dan scan QR meja. |
+| **Proses Memilih** | Terburu-buru karena merasa ditunggui antrean. | Lebih santai menjelajahi e-katalog digital lewat HP masing-masing. |
+| **Input Pesanan** | Kasir mengetik manual satu per satu di tablet. | Pelanggan memilih secara *self-service*, kasir tinggal menerima log. |
+| **Instruksi Kerja** | Bergantung pada penyampaian verbal / ketikan kasir. | Pesanan tercatat otomatis pada monitor dasbor kasir dan barista. |
 
 ---
 
+## ⚙️ Detail Use Case (Skenario Sistem)
+
+### A. Melakukan Pemesanan Mandiri
+* **Aktor**: Pelanggan
+* **Deskripsi**: Pelanggan memilih menu yang diinginkan dari meja tanpa harus mengantre di meja kasir.
+
+🎬 **Skenario Pelanggan & Sistem**:
+1. Pelanggan memindai QR Code unik yang terempel di meja masing-masing.
+2. Sistem otomatis membuka e-katalog menu tanpa perlu proses login/registrasi.
+3. Pelanggan menjelajahi daftar menu dan memasukkan item pilihan ke keranjang digital.
+4. Pelanggan menginput nomor meja dan menekan tombol **Checkout**.
+* **Kondisi Akhir**: Pesanan terkirim ke server kasir dengan status *Pending*.
+
 ---
 
-## ⚙️ Use Case (Skenario Utama)
+### B. Konfirmasi & Simulasi Pembayaran
+* **Aktor**: Pelanggan
+* **Precondition**: Pelanggan telah melakukan *Checkout* pesanan.
 
-### **Ringkasan Peran**
-* **Pelanggan**: Melakukan scan QR meja, memilih menu, dan melakukan pembayaran mandiri.
-* **Kasir**: Menerima notifikasi, memverifikasi pembayaran, dan mencetak struk produksi.
-* **Barista**: Menerima struk fisik dan memproses pesanan sesuai urutan.
-* **Pelayan**: Mengantarkan pesanan ke nomor meja yang tertera pada struk.
+🎬 **Skenario Pelanggan & Sistem**:
+1. Sistem menampilkan rincian nota digital (invoice) beserta total nominal yang harus dibayar.
+2. Pelanggan melihat instruksi gambar QRIS statis yang muncul di layar gawai.
+3. Pelanggan melakukan transfer dan menekan tombol konfirmasi **"Saya Sudah Bayar"**.
+4. Sistem mengunci halaman pelanggan dengan tampilan "Menunggu Verifikasi Kasir".
+* **Kondisi Akhir**: Riwayat konfirmasi transaksi masuk ke monitor dasbor kasir.
 
-### **Detail Alur (Skenario Utama)**
-1. **Pemesanan Mandiri**: Pelanggan scan QR -> Pilih Menu -> Checkout & Bayar.
-2. **Verifikasi Kasir**: Kasir menerima data -> Validasi Dana & Stok -> Klik tombol 'Cetak Struk'.
-3. **Produksi & Serving**: Barista menyiapkan menu -> Pelayan mengantar pesanan -> Transaksi Selesai.
+---
 
-<br>
+### C. Verifikasi & Kelola Antrean Pesanan
+* **Aktor**: Kasir
+* **Precondition**: Terdapat pesanan masuk dengan status *Pending* (🟡).
+
+🎬 **Skenario Kasir & Sistem**:
+1. Kasir membuka dasbor monitor khusus staf dan memilih data pesanan terbaru.
+2. Kasir memverifikasi kecocokan dana masuk pada rekening bank dengan nominal di sistem.
+3. Kasir mengonfirmasi ketersediaan bahan baku menu di dapur.
+4. Kasir menekan tombol **"Verifikasi / Proses"** pada sistem.
+5. Sistem otomatis mengubah status pesanan menjadi *Diproses* (🔵) dan memunculkannya di monitor dapur barista.
+* **Kondisi Akhir**: Status pesanan diperbarui menjadi *Diproses* dan antrean masuk ke manifes kerja barista.
 
 <p align="center">
-  <img src="diagram_usecase.png" alt="Diagram Use Case Kelompok 5" width="1000">
-  <br>
-  <i>Gambar 2: Diagram Use Case Sistem Scan-to-Order DYDY Coffee</i>
+  <img src="diagram_usecase.png" alt="DIagram usecase" width="1000">
+    <i>Gambar 2: Diagram usecase & detailnya Coffee</i>
 </p>
 
 ---
 
+## 👥 Analisis Aktor
+Berdasarkan identifikasi sistem *Scan-to-Order* DYDY Coffee, berikut adalah karakteristik, hak akses, dan batasan tanggung jawab dari setiap aktor yang terlibat:
+
+### 1. Pelanggan (Customer) - *Primary Actor (Eksternal)*
+* **Deskripsi**: Pengguna akhir yang datang ke kafe dan ingin memesan menu secara mandiri lewat meja masing-masing.
+* **Hak Akses Sistem**:
+  * Melakukan *scanning* QR Code meja untuk masuk ke sistem tanpa registrasi akun.
+  * Melihat e-katalog menu (nama, deskripsi, gambar, dan harga real-time).
+  * Menambahkan menu ke dalam keranjang belanja digital.
+  * Mengisi data nomor meja dan melakukan konfirmasi/simulasi transaksi pembayaran.
+
+### 2. Kasir (Cashier) - *Primary Actor (Internal)*
+* **Deskripsi**: Staf operasional kafe yang bertanggung jawab atas validasi finansial dan kendali utama status pesanan di dasbor web.
+* **Hak Akses Sistem**:
+  * Mengakses halaman dasbor monitor pesanan khusus staf (*back-office*).
+  * Menerima notifikasi *real-time* pesanan masuk dengan status *Pending*.
+  * Melakukan verifikasi pembayaran (mencocokkan dana masuk dengan data pesanan).
+  * Mengubah status pesanan dari *Pending* -> *Diproses* -> *Selesai*.
+
+### 3. Barista - *Secondary Actor (Internal)*
+* **Deskripsi**: Staf produksi yang bertanggung jawab meracik minuman dan makanan sesuai manifes pesanan.
+* **Hak Akses Sistem**:
+  * Memantau antrean pesanan pada monitor dapur yang berstatus *Diproses*.
+  * Melihat detail pesanan (jenis varian menu, catatan khusus dari pelanggan, dan nomor meja asal).
+  * Memberikan sinyal ke sistem/pelayan jika pesanan telah selesai diracik dan siap diantar.
+
+### 4. Pelayan (Waiter) - *Secondary Actor (Internal / Pendukung)*
+* **Deskripsi**: Staf lapangan yang mengantarkan menu fisik ke pelanggan. Meskipun tidak berinteraksi langsung dengan input data ke sistem web, alur kerjanya digerakkan oleh output informasi valid dari monitor dasbor kasir/barista yang menunjukkan nomor meja tujuan secara akurat.
+
+---
+
 ## 💡 Solusi yang Diberikan
-Sistem ini dibangun untuk menyelesaikan masalah efisiensi dengan fitur unggulan:
-* **Hybrid Control**: Teknologi mempercepat pesanan, namun kasir tetap memegang kendali penuh (filter) untuk menjaga kualitas layanan.
-* **Digital Catalog & QR Unique**: Menghilangkan kebutuhan antre di kasir. Setiap meja memiliki QR unik sehingga nomor meja otomatis tercatat.
-* **Otomatisasi Instruksi**: Mengurangi risiko miskomunikasi antara kasir dan dapur melalui printer struk otomatis.
-* **Resiliensi Sistem**: Dilengkapi dengan strategi *Offline Mode Standby* (katalog fisik) jika terjadi gangguan ISP.
+Sistem berbasis web sederhana ini dibangun untuk mempermudah operasional melalui fitur utama:
+* **E-Katalog Terbuka**: Pelanggan tidak perlu mengunduh aplikasi, cukup akses cepat lewat browser HP setelah memindai QR.
+* **Simpel Gateway**: Menyediakan tampilan gambar QR pembayaran statis sehingga memangkas kerumitan integrasi API bank namun fungsi pembayaran tetap tersimulasikan dengan baik.
+* **Dasbor Monitor Kasir (Real-Time)**: Kasir memegang kendali penuh atas alur pemrosesan pesanan yang masuk demi menjaga kualitas pelayanan (*Hybrid Control*).
 
 ---
 
