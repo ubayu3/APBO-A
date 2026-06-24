@@ -156,6 +156,10 @@ Klik pada masing-masing bagian di bawah ini untuk melihat detail transkrip wawan
     <i>Gambar 2: Diagram usecase & detailnya Coffee</i>
 </p>
 
+<p align="center">
+  <img src="nama file nya" alt="diagram apa" width="1000">
+    <i>Gambar 2: (sesuaiin gambar ke berapa sama itu gambar apa)</i>
+</p>
 ---
 
 ## 👥 Analisis Aktor
