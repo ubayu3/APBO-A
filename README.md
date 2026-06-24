@@ -1,126 +1,151 @@
-# APBO-A KEL-5 
-## LAPORAN TUGAS APBO: OPTIMALISASI ALUR PEMESANAN PADA DYDY COFFEE
-**Dosen:** Adi Wahyu Pribadi, S.Si., M.Kom
+# DYDY Coffee Scan-to-Order System
+
+## Tentang Proyek
+
+Proyek ini dibuat berdasarkan hasil observasi dan wawancara yang dilakukan di DYDY Coffee. Saat ini proses pemesanan masih dilakukan melalui kasir menggunakan tablet yang tersedia di area kasir.
+
+Pada kondisi tertentu, terutama saat akhir pekan atau jam ramai, pelanggan harus menunggu antrean sebelum dapat melakukan pemesanan. Selain itu, pelanggan juga memiliki waktu yang relatif terbatas untuk melihat menu karena ada pelanggan lain yang sedang menunggu giliran.
+
+Untuk membantu mengatasi kondisi tersebut, dibuat rancangan sistem Scan-to-Order berbasis web yang memungkinkan pelanggan memesan langsung dari meja melalui QR Code.
 
 ---
 
-### **Anggota Kelompok 5:**
-* **4524210020** - Bryan Ananda Saputra Hulu
-* **4524210056** - Muhammad Agis Irawan
-* **4524210052** - M. AL GHIFARI
-* **4524210019** - Bayu Sardo Situmorang
-* **4524210029** - Dzikrullah Surachman
+## Dokumentasi Wawancara
 
+<p align="center">
+    <img src="image.png" width="800">
+</p>
 
-<br><br>
-
-![alt text](image.png)
-
-<br><br>
-
-**Tema Tugas:**
-OPTIMALISASI ALUR PEMESANAN PADA DYDY COFFEE
-
-
----
-## 📖 Latar Belakang
-DYDY Coffee saat ini menghadapi tantangan operasional dalam menangani lonjakan pelanggan di jam sibuk. Berdasarkan wawancara dengan Bapak Dani, sistem pemesanan konvensional di kasir menyebabkan penumpukan antrean (queue bottleneck). Hal ini memberikan tekanan psikologis bagi pelanggan saat memilih menu dan membuat staf kasir tidak fleksibel untuk membantu pelayanan di area meja.
-
-Ketiadaan sistem pemesanan mandiri membuat alur kerja menjadi kurang efektif. Oleh karena itu, diperlukan sistem informasi Scan-to-Order berbasis web untuk mempercepat proses transaksi, meminimalisir kesalahan pesanan, namun tetap menjaga interaksi hangat (hospitality) yang menjadi ciri khas DYDY Coffee.
-
----
-## 🎯 Sasaran Pengguna
-
-👨‍💼 Kasir & Barista: Pengelola yang memvalidasi pesanan, memantau ketersediaan stok, dan menerima instruksi kerja otomatis di area produksi.
-
-🧑‍💻 Customer (Pelanggan): Pengunjung yang menginginkan kemudahan memesan menu langsung dari meja tanpa harus mengantre lama di kasir.
+<p align="center">
+    <i>Gambar 1. Wawancara dengan Bapak Dani selaku Owner DYDY Coffee</i>
+</p>
 
 ---
 
-## ⚖️ Bagian 1: Analisis Perbandingan Sistem
+## Hasil Wawancara
 
-| Kategori | Sistem Lama (Konvensional) | Sistem Baru (Digital Scan-to-Order) |
-| :--- | :--- | :--- |
-| **Alur Antrean** | Menumpuk di depan kasir, mengganggu arus masuk. | Terurai karena pelanggan memesan langsung dari meja. |
-| **Proses Memilih** | Terburu-buru karena merasa ditunggu antrean belakang. | Lebih santai, pelanggan bebas melihat detail menu di HP. |
-| **Input Pesanan** | Kasir mengetik manual satu per satu di tablet. | Pelanggan input mandiri; Kasir tinggal verifikasi & bayar. |
-| **Komunikasi Barista** | Bergantung pada penyampaian verbal atau input manual. | Struk otomatis tercetak di Bar sebagai instruksi kerja sah. |
+Berdasarkan wawancara yang dilakukan dengan Bapak Dani selaku owner DYDY Coffee, diketahui bahwa proses pemesanan saat ini masih berjalan secara manual melalui kasir. Menurut beliau, antrean biasanya terjadi ketika jumlah pelanggan meningkat, terutama pada akhir pekan.
 
----
+Beliau juga menyampaikan bahwa penerapan sistem pemesanan digital dapat membantu pelanggan karena mereka dapat memilih menu dengan lebih santai tanpa harus mengantre terlebih dahulu.
 
-## 📌 Bagian 2: Skenario Sistem (Use Case)
-Diagram Use Case:
-Rincian Alur Sistem (Proses Inti):
-1. Pemesanan Mandiri: Pelanggan scan QR Code di meja, memilih menu, dan mengirim pesanan ke sistem.
-2. Verifikasi Kasir: Kasir menerima notifikasi, mengecek stok, dan memvalidasi pembayaran pelanggan.
-3. Integrasi Produksi: Setelah divalidasi, sistem mengirim perintah cetak struk ke area Barista untuk diproses.
-4. Kontrol Layanan: Staf tetap bisa melakukan interaksi personal saat mengantar pesanan ke meja.
+Selain itu, tantangan yang perlu diperhatikan apabila sistem diterapkan adalah kestabilan jaringan internet serta konsistensi staf dalam memperbarui informasi stok menu.
 
 ---
 
+## Permasalahan yang Ditemukan
 
-## 📌 GIT WORKFLOW (Panduan Kontribusi)
-1.  `git clone` (Clone repo ke local)
-2.  `git checkout -b NAMAKALIAN` (Membuat branch dengan nama sendiri)
-3.  `git checkout branch_tujuan` (Pindah branch kalian atau ke main)
-4.  `git add .` (Menambah perubahan yang ingin dicommit)
-5.  `git commit -m "pesan commit"` (Commit perubahan)
-6.  `git push -u origin BRANCHKALIAN` (Push ke branch sendiri, **JANGAN KE MAIN!!**)
-7.  `git pull origin main` (Pull dari main ketika sudah merge final)
-8.  `git merge main` (Merge perubahan main yang terupdate ke branch sendiri)
+Beberapa permasalahan yang ditemukan selama proses analisis antara lain:
+
+* Pemesanan masih terpusat di area kasir.
+* Antrean dapat terjadi ketika jumlah pelanggan meningkat.
+* Kasir harus menangani proses pemesanan dan pembayaran secara bersamaan.
+* Pelanggan terkadang harus menunggu sebelum dapat melakukan pemesanan.
 
 ---
 
-## 1. Topik Proyek
-"Optimalisasi Alur Pemesanan melalui Sistem Scan-to-Order Berbasis Web dengan Kasir sebagai Pusat Kendali Operasional (Studi Kasus: Coffee Shop DYDY)."
+## Solusi yang Diusulkan
 
-## 2. Identifikasi Masalah (Problem)
-Berdasarkan observasi pada sistem pemesanan yang saat ini terpusat di satu tablet kasir:
+Solusi yang ditawarkan adalah sistem pemesanan berbasis web yang dapat diakses melalui QR Code pada setiap meja.
 
-### Antrean Fisik (Queue Bottleneck)
-* Pelanggan tetap harus berdiri mengantre di kasir meskipun sudah menggunakan tablet. Ini menghambat pelanggan lain yang ingin segera duduk atau masuk.
-* Owner mengonfirmasi bahwa pada hari sibuk (weekend), terjadi antrean panjang akibat input order yang masih manual.
+Dengan sistem ini, pelanggan dapat melihat menu, memilih pesanan, dan melakukan checkout langsung dari perangkat masing-masing. Data pesanan yang masuk akan ditampilkan pada dashboard sehingga kasir dan barista dapat memantau pesanan dengan lebih mudah.
 
-### Tekanan Saat Memesan
-* Pelanggan sering merasa terburu-buru memilih menu karena ada antrean di belakangnya, sehingga jarang melakukan pesanan tambahan (add-ons).
+---
 
-### Risiko Operasional
-* **Risiko Salah Komunikasi:** Tanpa dokumentasi yang teratur, risiko kesalahan pembuatan menu oleh barista tetap tinggi.
-* **Keterbatasan Jangkauan:** Staf kasir tidak bisa meninggalkan meja kasir karena harus menjaga satu-satunya akses pemesanan (tablet).
+## Analisis Sistem
 
-## 3. Analisa Solusi
-Sistem dirancang agar kasir berfungsi sebagai penyaring (filter) utama dengan keunggulan:
-* **Kontrol Kualitas & Stok:** Kasir dapat memvalidasi stok secara manual sebelum barista mulai bekerja.
-* **Sentuhan Manusia (Hospitality):** Menjaga interaksi antara staf dan pelanggan agar kasir tetap menjadi pengelola alur pesanan, bukan sekadar penerima uang.
-* **Validasi Pembayaran:** Kasir memastikan status "Paid" sesuai dengan dana yang masuk sebelum memerintahkan produksi.
+| Sistem Saat Ini                             | Sistem Usulan                            |
+| ------------------------------------------- | ---------------------------------------- |
+| Pemesanan dilakukan melalui kasir           | Pemesanan dilakukan melalui QR Code      |
+| Kasir mencatat pesanan secara manual        | Pesanan dicatat langsung oleh sistem     |
+| Antrean sering terjadi saat ramai           | Pelanggan dapat memesan dari meja        |
+| Informasi pesanan disampaikan secara manual | Informasi pesanan tersimpan dalam sistem |
 
-## 4. Struktur Aktor dan Use Case
+---
 
-### Aktor Sistem
-1.  **Pelanggan:** Melakukan scan QR, memilih menu, dan membayar mandiri melalui web.
-2.  **Kasir:** Memverifikasi pesanan, mengecek ketersediaan bahan, dan memberikan instruksi produksi (struk fisik).
-3.  **Barista/Dapur:** Membuat pesanan berdasarkan urutan struk fisik yang diterima dari kasir.
-4.  **Pelayan:** Mengantarkan pesanan ke meja sesuai nomor yang tertera di struk.
+## Aktor Sistem
 
-### Use Case Utama
-* **Scan-to-Order:** Pelanggan memindai QR Code unik di setiap meja.
-* **Pemesanan Mandiri:** Pelanggan memilih menu dan membayar via e-wallet di halaman web.
-* **Verifikasi Pusat:** Kasir menerima notifikasi pesanan dan mencetak struk otomatis untuk divalidasi.
+### Pelanggan
 
-## 5. Diagram Workflow (Alur Kerja/SOP)
-1.  **Pemisahan Meja:** Setiap meja diberikan QR Code unik yang tertanam nomor mejanya.
-2.  **Pemesanan Mandiri:** Pelanggan duduk, scan, memilih menu, dan membayar langsung di web.
-3.  **Verifikasi Pusat (Kasir):** Pesanan masuk ke tablet kasir; printer mencetak struk secara otomatis.
-4.  **Instruksi Produksi:** Kasir mengecek stok, lalu menyerahkan struk fisik ke Barista sebagai tanda "Sah".
-5.  **Proses Pembuatan:** Barista membuat pesanan berdasarkan urutan struk fisik.
-6.  **Pengantaran (Serving):** Pelayan mengantarkan pesanan ke meja sesuai nomor di struk.
-7.  **Penyelesaian:** Pelanggan bisa langsung pulang tanpa harus kembali ke kasir (mengurangi kerumunan).
+Pelanggan dapat mengakses sistem melalui QR Code yang tersedia pada meja. Setelah masuk ke halaman menu, pelanggan dapat memilih menu, melakukan checkout, dan melakukan konfirmasi pembayaran.
 
-<img width="708" height="400" alt="WF2" src="https://github.com/user-attachments/assets/00c43213-015e-499c-8f70-00384ff603b7" />
+### Kasir
 
+Kasir bertugas memeriksa pesanan yang masuk, melakukan verifikasi pembayaran, serta memperbarui status pesanan sesuai kondisi sebenarnya.
 
-## 6. Hasil Validasi (Interview Owner)
-Hasil wawancara dengan Dani (Owner DYDY):
-* Sistem keluar struk otomatis dinilai jauh lebih efisien dan membantu dibandingkan input manual.
-* Owner setuju bahwa sistem ini memberikan kenyamanan bagi pelanggan agar tidak terburu-buru memesan.
-* Tantangan utama adalah pengelolaan update stok secara berkala serta stabilitas jaringan/hosting web.
+### Barista
+
+Barista menerima informasi pesanan yang sudah diverifikasi oleh kasir dan menyiapkan pesanan sesuai data yang terdapat pada sistem.
+
+### Pelayan
+
+Pelayan bertugas mengantarkan pesanan yang sudah selesai dibuat ke meja pelanggan sesuai nomor meja yang tercatat.
+
+---
+
+## Use Case Diagram
+
+<img src="diagram_usecase.png" width="900">
+
+<p align="center">
+    <i>Gambar 2. Use Case Diagram Sistem Scan-to-Order DYDY Coffee</i>
+</p>
+
+---
+
+## Alur Sistem
+
+1. Pelanggan memindai QR Code yang tersedia di meja.
+2. Sistem menampilkan daftar menu yang tersedia.
+3. Pelanggan memilih menu yang ingin dipesan.
+4. Pelanggan melakukan checkout.
+5. Sistem menampilkan rincian pembayaran.
+6. Pelanggan melakukan konfirmasi pembayaran.
+7. Kasir melakukan verifikasi.
+8. Barista menyiapkan pesanan.
+9. Pelayan mengantarkan pesanan ke meja pelanggan.
+
+---
+
+## Teknologi yang Digunakan
+
+* Laravel
+* PHP
+* MySQL
+* HTML
+* CSS
+* JavaScript
+
+---
+
+## Tim Pengembang
+
+| Nama                      | NPM        |
+| ------------------------- | ---------- |
+| Bryan Ananda Saputra Hulu | 4524210020 |
+| Muhammad Agis Irawan      | 4524210056 |
+| M. Al Ghifari             | 4524210052 |
+| Bayu Sardo Situmorang     | 4524210019 |
+| Dzikrullah Surachman      | 4524210029 |
+
+---
+
+## Git Workflow
+
+```bash
+git clone <repository>
+
+git checkout -b nama_branch
+
+git add .
+git commit -m "pesan commit"
+
+git push -u origin nama_branch
+
+git pull origin main
+```
+
+---
+
+## Kesimpulan
+
+Berdasarkan hasil wawancara dan analisis yang telah dilakukan, sistem Scan-to-Order dapat digunakan sebagai alternatif untuk membantu proses pemesanan di DYDY Coffee. Dengan adanya QR Code pada setiap meja, pelanggan tidak perlu datang ke kasir untuk melakukan pemesanan sehingga proses pelayanan dapat berjalan dengan lebih praktis dan teratur.
