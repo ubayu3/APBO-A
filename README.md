@@ -1,14 +1,12 @@
 # DYDY Coffee Scan-to-Order System
 
-Sistem pemesanan berbasis QR Code untuk membantu proses pemesanan pelanggan di DYDY Coffee secara lebih praktis dan efisien.
-
----
-
 ## Tentang Proyek
 
-DYDY Coffee saat ini masih menggunakan proses pemesanan yang berpusat pada area kasir. Saat kondisi ramai, pelanggan harus mengantri untuk melakukan pemesanan sehingga proses pelayanan menjadi lebih lambat.
+Proyek ini dibuat berdasarkan hasil observasi dan wawancara yang dilakukan di DYDY Coffee. Saat ini proses pemesanan masih dilakukan melalui kasir menggunakan tablet yang tersedia di area kasir.
 
-Berdasarkan hasil wawancara dengan owner DYDY Coffee, salah satu kendala yang sering terjadi adalah antrean pada akhir pekan atau jam sibuk. Oleh karena itu, dikembangkan sistem **Scan-to-Order berbasis web** yang memungkinkan pelanggan melakukan pemesanan langsung dari meja menggunakan QR Code.
+Pada kondisi tertentu, terutama saat akhir pekan atau jam ramai, pelanggan harus menunggu antrean sebelum dapat melakukan pemesanan. Selain itu, pelanggan juga memiliki waktu yang relatif terbatas untuk melihat menu karena ada pelanggan lain yang sedang menunggu giliran.
+
+Untuk membantu mengatasi kondisi tersebut, dibuat rancangan sistem Scan-to-Order berbasis web yang memungkinkan pelanggan memesan langsung dari meja melalui QR Code.
 
 ---
 
@@ -19,41 +17,48 @@ Berdasarkan hasil wawancara dengan owner DYDY Coffee, salah satu kendala yang se
 </p>
 
 <p align="center">
-    <i>Gambar 1. Dokumentasi wawancara dengan owner DYDY Coffee</i>
+    <i>Gambar 1. Wawancara dengan Bapak Dani selaku Owner DYDY Coffee</i>
 </p>
+
+---
+
+## Hasil Wawancara
+
+Berdasarkan wawancara yang dilakukan dengan Bapak Dani selaku owner DYDY Coffee, diketahui bahwa proses pemesanan saat ini masih berjalan secara manual melalui kasir. Menurut beliau, antrean biasanya terjadi ketika jumlah pelanggan meningkat, terutama pada akhir pekan.
+
+Beliau juga menyampaikan bahwa penerapan sistem pemesanan digital dapat membantu pelanggan karena mereka dapat memilih menu dengan lebih santai tanpa harus mengantre terlebih dahulu.
+
+Selain itu, tantangan yang perlu diperhatikan apabila sistem diterapkan adalah kestabilan jaringan internet serta konsistensi staf dalam memperbarui informasi stok menu.
 
 ---
 
 ## Permasalahan yang Ditemukan
 
-* Pemesanan masih dilakukan secara manual melalui kasir.
-* Antrean pelanggan meningkat saat jam sibuk.
-* Kasir harus menangani pencatatan pesanan sekaligus pembayaran.
-* Pelanggan memiliki waktu terbatas saat memilih menu.
+Beberapa permasalahan yang ditemukan selama proses analisis antara lain:
+
+* Pemesanan masih terpusat di area kasir.
+* Antrean dapat terjadi ketika jumlah pelanggan meningkat.
+* Kasir harus menangani proses pemesanan dan pembayaran secara bersamaan.
+* Pelanggan terkadang harus menunggu sebelum dapat melakukan pemesanan.
 
 ---
 
 ## Solusi yang Diusulkan
 
-Sistem Scan-to-Order dirancang untuk membantu proses pemesanan dengan fitur berikut:
+Solusi yang ditawarkan adalah sistem pemesanan berbasis web yang dapat diakses melalui QR Code pada setiap meja.
 
-* Pemesanan melalui QR Code.
-* Katalog menu digital.
-* Keranjang belanja (cart).
-* Konfirmasi pembayaran.
-* Dashboard monitoring pesanan.
-* Manajemen status pesanan.
+Dengan sistem ini, pelanggan dapat melihat menu, memilih pesanan, dan melakukan checkout langsung dari perangkat masing-masing. Data pesanan yang masuk akan ditampilkan pada dashboard sehingga kasir dan barista dapat memantau pesanan dengan lebih mudah.
 
 ---
 
 ## Analisis Sistem
 
-| Sistem Lama                          | Sistem Usulan                     |
-| ------------------------------------ | --------------------------------- |
-| Pemesanan melalui kasir              | Pemesanan melalui QR Code         |
-| Input pesanan dilakukan kasir        | Input pesanan dilakukan pelanggan |
-| Antrean sering terjadi saat ramai    | Antrean dapat dikurangi           |
-| Informasi pesanan disampaikan manual | Informasi tersimpan pada sistem   |
+| Sistem Saat Ini                             | Sistem Usulan                            |
+| ------------------------------------------- | ---------------------------------------- |
+| Pemesanan dilakukan melalui kasir           | Pemesanan dilakukan melalui QR Code      |
+| Kasir mencatat pesanan secara manual        | Pesanan dicatat langsung oleh sistem     |
+| Antrean sering terjadi saat ramai           | Pelanggan dapat memesan dari meja        |
+| Informasi pesanan disampaikan secara manual | Informasi pesanan tersimpan dalam sistem |
 
 ---
 
@@ -61,25 +66,19 @@ Sistem Scan-to-Order dirancang untuk membantu proses pemesanan dengan fitur beri
 
 ### Pelanggan
 
-* Memindai QR Code.
-* Melihat daftar menu.
-* Melakukan pemesanan.
-* Melakukan konfirmasi pembayaran.
+Pelanggan dapat mengakses sistem melalui QR Code yang tersedia pada meja. Setelah masuk ke halaman menu, pelanggan dapat memilih menu, melakukan checkout, dan melakukan konfirmasi pembayaran.
 
 ### Kasir
 
-* Memverifikasi pembayaran.
-* Mengelola status pesanan.
-* Memantau pesanan yang masuk.
+Kasir bertugas memeriksa pesanan yang masuk, melakukan verifikasi pembayaran, serta memperbarui status pesanan sesuai kondisi sebenarnya.
 
 ### Barista
 
-* Melihat daftar pesanan.
-* Menyiapkan pesanan sesuai data sistem.
+Barista menerima informasi pesanan yang sudah diverifikasi oleh kasir dan menyiapkan pesanan sesuai data yang terdapat pada sistem.
 
 ### Pelayan
 
-* Mengantarkan pesanan ke meja pelanggan.
+Pelayan bertugas mengantarkan pesanan yang sudah selesai dibuat ke meja pelanggan sesuai nomor meja yang tercatat.
 
 ---
 
@@ -90,21 +89,21 @@ Sistem Scan-to-Order dirancang untuk membantu proses pemesanan dengan fitur beri
 </p>
 
 <p align="center">
-    <i>Gambar 2. Use Case Diagram Sistem Scan-to-Order</i>
+    <i>Gambar 2. Use Case Diagram Sistem Scan-to-Order DYDY Coffee</i>
 </p>
 
 ---
 
-## Alur Pemesanan
+## Alur Sistem
 
-1. Pelanggan memindai QR Code pada meja.
-2. Sistem menampilkan daftar menu.
-3. Pelanggan memilih menu yang diinginkan.
+1. Pelanggan memindai QR Code yang tersedia di meja.
+2. Sistem menampilkan daftar menu yang tersedia.
+3. Pelanggan memilih menu yang ingin dipesan.
 4. Pelanggan melakukan checkout.
 5. Sistem menampilkan rincian pembayaran.
 6. Pelanggan melakukan konfirmasi pembayaran.
 7. Kasir melakukan verifikasi.
-8. Barista memproses pesanan.
+8. Barista menyiapkan pesanan.
 9. Pelayan mengantarkan pesanan ke meja pelanggan.
 
 ---
@@ -120,7 +119,7 @@ Sistem Scan-to-Order dirancang untuk membantu proses pemesanan dengan fitur beri
 
 ---
 
-## Struktur Tim
+## Tim Pengembang
 
 | Nama                      | NPM        |
 | ------------------------- | ---------- |
@@ -151,4 +150,4 @@ git pull origin main
 
 ## Kesimpulan
 
-Berdasarkan hasil analisis dan wawancara yang telah dilakukan, sistem Scan-to-Order dapat membantu mengurangi antrean pelanggan serta mempermudah proses pemesanan di DYDY Coffee. Sistem ini memungkinkan pelanggan melakukan pemesanan secara mandiri melalui QR Code sehingga proses pelayanan menjadi lebih terorganisir.
+Berdasarkan hasil wawancara dan analisis yang telah dilakukan, sistem Scan-to-Order dapat digunakan sebagai alternatif untuk membantu proses pemesanan di DYDY Coffee. Dengan adanya QR Code pada setiap meja, pelanggan tidak perlu datang ke kasir untuk melakukan pemesanan sehingga proses pelayanan dapat berjalan dengan lebih praktis dan teratur.
