@@ -169,10 +169,6 @@ Pelayan bertugas mengantarkan pesanan yang sudah selesai dibuat ke meja pelangga
 
 ---
 
-## Use Case Diagram
-
-<img width="1376" height="768" alt="image" src="https://github.com/user-attachments/assets/d2223e3d-6fd3-41d5-9196-bdeeff95df55" />
-
 ## Sequence Diagram
 
 <p align="center">
