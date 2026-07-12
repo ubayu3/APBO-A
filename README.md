@@ -152,7 +152,7 @@ Pelayan bertugas mengantarkan pesanan yang sudah selesai dibuat ke meja pelangga
 
     <br>
     <p align="center">
-    <i>Gambar 4. Class Diagram Struktur Data Sistem Scan-to-Order DYDY Coffee</i>
+    <i>Gambar 3. Class Diagram Struktur Data Sistem Scan-to-Order DYDY Coffee</i>
 </p>
 
 ---
@@ -164,7 +164,7 @@ Pelayan bertugas mengantarkan pesanan yang sudah selesai dibuat ke meja pelangga
 
     <br>
     <p align="center">
-    <i>Gambar 6. State Diagram Perubahan Status Pesanan DYDY Coffee</i>
+    <i>Gambar 4. State Diagram Perubahan Status Pesanan DYDY Coffee</i>
 </p>
 
 ---
@@ -188,7 +188,7 @@ Pelayan bertugas mengantarkan pesanan yang sudah selesai dibuat ke meja pelangga
 
     <br>
     <p align="center">
-    <i>Gambar 3. Activity Diagram Alur Kerja Sistem Scan-to-Order DYDY Coffee</i>
+    <i>Gambar 6. Activity Diagram Alur Kerja Sistem Scan-to-Order DYDY Coffee</i>
 </p>
 
 ---
