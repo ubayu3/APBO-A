@@ -100,12 +100,28 @@ Pelayan bertugas mengantarkan pesanan yang sudah selesai dibuat ke meja pelangga
 
 ---
 
+## Alur Sistem
+
+1. Pelanggan memindai QR Code yang tersedia di meja.
+2. Sistem menampilkan daftar menu yang tersedia.
+3. Pelanggan memilih menu yang ingin dipesan.
+4. Pelanggan melakukan checkout.
+5. Sistem menampilkan rincian pembayaran.
+6. Pelanggan melakukan konfirmasi pembayaran.
+7. Kasir melakukan verifikasi.
+8. Barista menyiapkan pesanan.
+9. Pelayan mengantarkan pesanan ke meja pelanggan.
+
+---
+
+
 ## Use Case Diagram
 
 <p align="center">
-    <img src="Diagram/diagram_usecase.png" width="900" alt="Use Case Diagram">
-    <br>
-    <i>Gambar 2. Use Case Diagram Sistem Scan-to-Order DYDY Coffee</i>
+    <img width="425" height="904" alt="usecase" src="https://github.com/user-attachments/assets/228d165e-d0c9-4646-b62d-fbdadf74104d" />
+
+    <p align="center">
+    <i>Gambar 2. Use Case Diagram Sistem Scan-to-Order DYDY Coffee</i>
 </p>
 
 ### Skenario Use Case
@@ -129,33 +145,14 @@ Pelayan bertugas mengantarkan pesanan yang sudah selesai dibuat ke meja pelangga
 > 4. Sistem memperbarui status pesanan menjadi diproses dan meneruskannya ke barista.
 
 ---
-
-## Activity Diagram
-
-<p align="center">
-    <img src="Diagram/activity_diagram.png" width="900" alt="Activity Diagram">
-    <br>
-    <i>Gambar 3. Activity Diagram Alur Kerja Sistem Scan-to-Order DYDY Coffee</i>
-</p>
-
----
-
 ## Class Diagram
 
 <p align="center">
-    <img src="Diagram/class_diagram.png" width="900" alt="Class Diagram">
+    <img width="1015" height="502" alt="class diagram" src="https://github.com/user-attachments/assets/d6af1bc8-ca7b-46d1-b2cd-6e792966913e" />
+
     <br>
+    <p align="center">
     <i>Gambar 4. Class Diagram Struktur Data Sistem Scan-to-Order DYDY Coffee</i>
-</p>
-
----
-
-## Sequence Diagram
-
-<p align="center">
-    <img src="Diagram/sequence_diagram.png" width="900" alt="Sequence Diagram">
-    <br>
-    <i>Gambar 5. Sequence Diagram Interaksi Komponen Sistem Scan-to-Order DYDY Coffee</i>
 </p>
 
 ---
@@ -163,24 +160,37 @@ Pelayan bertugas mengantarkan pesanan yang sudah selesai dibuat ke meja pelangga
 ## State Diagram
 
 <p align="center">
-    <img src="Diagram/state_diagram.png" width="900" alt="State Diagram">
+    <img width="951" height="408" alt="state_diagram" src="https://github.com/user-attachments/assets/da93d018-fb1c-482e-bb12-d604e4f0a8c5" />
+
     <br>
+    <p align="center">
     <i>Gambar 6. State Diagram Perubahan Status Pesanan DYDY Coffee</i>
 </p>
 
 ---
 
-## Alur Sistem
 
-1. Pelanggan memindai QR Code yang tersedia di meja.
-2. Sistem menampilkan daftar menu yang tersedia.
-3. Pelanggan memilih menu yang ingin dipesan.
-4. Pelanggan melakukan checkout.
-5. Sistem menampilkan rincian pembayaran.
-6. Pelanggan melakukan konfirmasi pembayaran.
-7. Kasir melakukan verifikasi.
-8. Barista menyiapkan pesanan.
-9. Pelayan mengantarkan pesanan ke meja pelanggan.
+## Sequence Diagram
+
+<p align="center">
+    <img width="1426" height="373" alt="squence diagram" src="https://github.com/user-attachments/assets/d81296df-922f-4b07-b60a-29ed7383ab49" />
+
+    <br>
+    <p align="center">
+    <i>Gambar 5. Sequence Diagram Interaksi Komponen Sistem Scan-to-Order DYDY Coffee</i>
+</p>
+
+---
+
+## Activity Diagram
+
+<p align="center">
+    <img width="1332" height="1017" alt="activity_diagram" src="https://github.com/user-attachments/assets/acc5eb08-1f97-43f4-8c50-c0b3a10db729" />
+
+    <br>
+    <p align="center">
+    <i>Gambar 3. Activity Diagram Alur Kerja Sistem Scan-to-Order DYDY Coffee</i>
+</p>
 
 ---
 
